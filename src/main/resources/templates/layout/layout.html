@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8" />
+<title th:text="'Spring Boot: Thymeleaf + Mision Tic JPA - ' + ${titulo}"></title>
+<link rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+	<header th:fragment="header">
+	</header>
+	
+	<main th:fragment="main">
+    <div class="portada">
+        <div id="carouselExampleCaptions" class="carousel slide car" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" id="container">
+                <div class="carousel-item active">
+                    <div class="cont_car">
+                        <img th:src="@{/img/qatar3.png}" class="i1">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="cont_car">
+                        <img th:src="@{/img/Qatar4.png}" class="i2">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="cont_car">
+                        <img th:src="@{/img/p3.webp}" class="i3">
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="enlaces" id="enlaces">
+            <div class="capa">
+                <h1><strong>Bienvienido</strong></h1><br>
+                <a th:href="@{/equipos/}">Equipos</a>
+                <a th:href="@{/grupos/}">Grupos</a>
+                <a th:href="@{/partidos/}">Partidos</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+	
+	<footer th:fragment="footer" class="container">
+		  <section id="footer">
+      <div>
+
+        <h1 class="mt-5 text-center">
+          @2022 MisionTic 2022 Ciclo 4 Todos los derechos Reservados, Grupo 3.
+        </h1>
+      </div>
+    </section>
+	</footer>
+</body>
+</html>
